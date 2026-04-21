@@ -1,0 +1,92 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Fundo degradê de cima para baixo: #215B63 para #124170 */
+    background: linear-gradient(to bottom, #215B63, #124170);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #AAFFC7; /* Cor do texto principal */
+    overflow: hidden;
+}
+
+/* Container central */
+.container {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(170, 255, 199, 0.2); /* #AAFFC7 a 2% */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    color: #AAFFC7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Botão */
+button {
+    /* Formato mais retangular com bordas arredondadas */
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    /* Aparência fosca e translúcida */
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(170, 255, 199, 0.3); /* #AAFFC7 */
+    color: #AAFFC7; /* Cor do texto do botão */
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Estado hover */
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-color: rgba(170, 255, 199, 0.5);
+}
+
+/* Estado ativo (clicado) */
+button:active {
+    transform: translateY(0);
+}
+
+/* Estado quando música está tocando */
+button.playing {
+    background: rgba(103, 192, 144, 0.2); /* Tom suave da cor complementar */
+    border-color: rgba(103, 192, 144, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}
